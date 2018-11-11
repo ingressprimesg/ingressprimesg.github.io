@@ -1,0 +1,56 @@
+html, body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Coda", sans-serif;
+  background: #5d3094;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+sup {
+  font-size: 0.4em;
+}
+nav {
+  color: #9c69db;
+  font-size: 0.9em;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      &:after {
+       content: '\00b7';
+       display: inline-block;
+       margin: 0 5px;
+      }
+
+      &:last-child:after{
+        display: none;
+      }
+    }
+  }
+  a, a:visited {
+    color: #9c69db;
+  }
+  a:hover{
+
+  }
+}
+.logo {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  margin: 0 auto;
+  img {
+    width: 100%;
+  }
+  @media(max-height: 480px) {
+    width: 150px;
+    height: 150px;
+  }
+}
