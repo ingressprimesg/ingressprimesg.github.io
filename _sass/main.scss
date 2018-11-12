@@ -1,11 +1,14 @@
+$theme: #004d40;
+$text-color: white;
+
 html, body {
   height: 100%;
 }
 body {
   margin: 0;
   font-family: "Coda", sans-serif;
-  background: #5d3094;
-  color: white;
+  background: $theme;
+  color: $text-color;
   text-align: center;
   display: flex;
   align-items: center;
@@ -15,7 +18,7 @@ sup {
   font-size: 0.4em;
 }
 nav {
-  color: #9c69db;
+  color: darken($text-color, 30%);
   font-size: 0.9em;
   ul {
     margin: 0;
@@ -35,7 +38,7 @@ nav {
     }
   }
   a, a:visited {
-    color: #9c69db;
+    color: darken($text-color, 30%);
   }
   a:hover{
 
