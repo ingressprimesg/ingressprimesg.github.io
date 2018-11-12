@@ -1,5 +1,6 @@
 $theme: #004d40;
 $text-color: white;
+$animation-speed: 1.5s;
 
 html, body {
   height: 100%;
@@ -13,12 +14,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: $animation-speed fadein;
 }
 sup {
   font-size: 0.4em;
 }
+.container {
+  animation: $animation-speed moveup;
+}
 nav {
-  color: darken($text-color, 30%);
+  color: darken($text-color, 40%);
   font-size: 0.9em;
   ul {
     margin: 0;
@@ -38,7 +43,8 @@ nav {
     }
   }
   a, a:visited {
-    color: darken($text-color, 30%);
+    color: $text-color;
+    opacity: 0.6;
   }
   a:hover{
 
@@ -56,4 +62,14 @@ nav {
     width: 150px;
     height: 150px;
   }
+}
+
+@keyframes fadein {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes moveup {
+  from {padding-top: 30px;}
+  to {padding-top: 0;}
 }
