@@ -8,22 +8,51 @@ html, body {
 body {
   margin: 0;
   font-family: "Coda", sans-serif;
-  background: $theme;
+  background: linear-gradient(#004D40, #00897B);
   color: $text-color;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   animation: $animation-speed fadein;
+  @media(max-height: 480px) {
+    font-size: 0.9em;
+  }
 }
+a, a:visited {
+  color: $text-color;
+  display: inline-block;
+  padding: 0 3px;
+  text-decoration: none;
+  line-height: 1.2;
+}
+a:hover{
+  background: $text-color;
+  transition: background-color 0.3s;
+  color: black;
+  border-radius: 3px;
+}
+
 sup {
   font-size: 0.4em;
 }
 .container {
   animation: $animation-speed moveup;
 }
+p {
+  margin: 0;
+  opacity: 0.6;
+}
+h3 {
+}
+
+.footer-links {
+  margin-top: 2em;
+}
+
 nav {
-  color: darken($text-color, 40%);
+  color: $text-color;
+  opacity: 0.6;
   font-size: 0.9em;
   ul {
     margin: 0;
@@ -41,13 +70,6 @@ nav {
         display: none;
       }
     }
-  }
-  a, a:visited {
-    color: $text-color;
-    opacity: 0.6;
-  }
-  a:hover{
-
   }
 }
 .logo {
@@ -70,6 +92,6 @@ nav {
 }
 
 @keyframes moveup {
-  from {padding-top: 30px;}
+  from {padding-top: 40px;}
   to {padding-top: 0;}
 }
