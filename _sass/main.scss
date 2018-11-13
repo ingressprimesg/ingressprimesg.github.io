@@ -22,15 +22,11 @@ body {
 a, a:visited {
   color: $text-color;
   display: inline-block;
-  padding: 0 3px;
   text-decoration: none;
   line-height: 1.2;
 }
 a:hover{
-  background: $text-color;
-  transition: background-color 0.3s;
-  color: black;
-  border-radius: 3px;
+  color: darken($text-color, 20%);
 }
 
 sup {
@@ -63,7 +59,7 @@ nav {
       &:after {
        content: '\00b7';
        display: inline-block;
-       margin: 0 5px;
+       margin: 0 2px 0 5px;
       }
 
       &:last-child:after{
