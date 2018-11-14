@@ -1,1 +1,5 @@
+title: Ingress Prime Singapore
+description: The augmented reality game that happens in Singapore
 exclude: ['readme.md', 'Gemfile.lock', 'Gemfile']
+plugins:
+  - jekyll-seo-tag
