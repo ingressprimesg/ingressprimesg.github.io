@@ -24,9 +24,10 @@ a, a:visited {
   display: inline-block;
   text-decoration: none;
   line-height: 1.2;
+  opacity: 0.8;
 }
 a:hover{
-  color: darken($text-color, 20%);
+  opacity: 1;
 }
 
 sup {
@@ -37,7 +38,6 @@ sup {
 }
 p {
   margin: 0;
-  opacity: 0.6;
 }
 h3 {
 }
@@ -80,6 +80,11 @@ nav {
     width: 150px;
     height: 150px;
   }
+}
+
+.redacted {
+  font-style: italic;
+  margin-top: 1em;
 }
 
 @keyframes fadein {
