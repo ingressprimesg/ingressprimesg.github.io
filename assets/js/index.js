@@ -7,7 +7,7 @@
   // Constants
   // Start: 2018-11-17 05:00:00 UTC
   // 2xReso: 2018-11-17 21:00:00 UTC
-  // End: 2018-11-266 18:00:00 UTC
+  // End: 2018-11-26 18:00:00 UTC
   var start = new Date(Date.UTC(2018, 10, 17, 5)),
       double = new Date(Date.UTC(2018, 10, 17, 21)),
       end = new Date(Date.UTC(2018, 10, 26, 18));
@@ -31,15 +31,15 @@
   function update() {
     var now = new Date();
     if (now < start) {
-      el.innerHTML = 'Start in ' + between(now, start);
+      el.innerHTML = '2xAP start in<br>' + between(now, start);
     } else if (now > start && now < end) {
       if (now < double) {
-        el.innerHTML = '2xAP started! 2Reso 4Mod 3Mins in ' + between(now, double);
+        el.innerHTML = '2xAP Started!<br>2Reso/4Mod/3Min in<br>' + between(now, double);
       } else {
-        el.innerHTML = 'Ends in ' + between(now, end);
+        el.innerHTML = '2xAP Started!<br>Ends in<br>' + between(now, end);
       }
     } else {
-      el.innerHTML = 'Double AP event has ended';
+      el.innerHTML = '2xAP has ended :(';
     }
   }
 
