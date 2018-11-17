@@ -21,11 +21,17 @@
 
   function between(fromDate, toDate) {
     var remainingSeconds = Math.abs(Math.round((fromDate.getTime() - toDate.getTime()) / 1000)),
-        hours = Math.floor(remainingSeconds / 3600),
-        minutes = Math.floor((remainingSeconds - hours * 3600) / 60),
-        seconds = remainingSeconds % 60;
+        days = Math.floor(remainingSeconds / 86400),
+        hours = Math.floor((remainingSeconds - days * 86400) / 3600),
+        minutes = Math.floor((remainingSeconds - days * 86400 - hours * 3600) / 60),
+        seconds = remainingSeconds % 60,
+        remainingDays = '';
 
-    return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
+    if (days >= 1) {
+      remainingDays = days + (days === 1 ? ' day ' : ' days '); 
+    }
+    
+    return remainingDays + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
   }
 
   function update() {
